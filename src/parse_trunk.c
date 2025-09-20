@@ -55,16 +55,12 @@ struct s_rt_scene *scene
 {
 	size_t	i;
 
-	i = 0;
-	while (g_singletons[i].name)
-	{
+	i = -1;
+	while (g_singletons[++i].name)
 		if (!ft_strncmp(element_fields[0],
 				g_singletons[i].name,
 				ft_strlen(g_singletons[i].name) + 1))
-		{
 			return (g_singletons[i].func(element_fields, scene));
-		}
-	}
 	ft_dprintf(2, ERR E_UNREC, element_fields[0]);
 	return (1);
 }
@@ -77,16 +73,12 @@ struct s_rt_scene *scene
 {
 	size_t	i;
 
-	i = 0;
-	while (g_primitives[i].name)
-	{
+	i = -1;
+	while (g_primitives[++i].name)
 		if (!ft_strncmp(element_fields[0],
 				g_primitives[i].name,
 				ft_strlen(g_primitives[i].name) + 1))
-		{
 			return (g_primitives[i].func(element_fields, scene));
-		}
-	}
 	ft_dprintf(2, ERR E_UNREC, element_fields[0]);
 	return (1);
 }
@@ -133,11 +125,13 @@ char ***split_file_array
 		ft_dprintf(2, ERR E_OOM);
 		return (1);
 	}
-	i = 0;
-	while (split_file_array[i])
+	i = -1;
+	while (split_file_array[++i])
 	{
 		if (parse_element(split_file_array[i], scene))
 		{
+			ft_dprintf(2, "parsing failed while processing element %zu: %s\n",
+				i + 1, split_file_array[i][0]);
 			free_scene(*scene);
 			return (1);
 		}
