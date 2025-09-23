@@ -75,4 +75,44 @@ double
 		struct s_vec3 c
 		);	// FILE: math/vec3_box_product.c
 
+//	//	line intersection functions
+//	returns a real number d equal to the distance from the lines origin to the
+//	point of intersection, or NAN if there is no intersection
+double		
+	closest_sphere_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/sphere.c
+double		
+	closest_plane_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/plane.c
+double		
+	closest_cylinder_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/cylinder.c
+double		
+	closest_superquadric_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/superquadric.c
+double		
+	closest_triangle_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/triangle.c
+double		
+	closest_stlfile_intersection(
+		t_element object,
+		struct s_vec3 origin,
+		struct s_vec3 normal
+		);	// FILE: math/intersection/stlfile.c
+
 #endif // MINIRT_MATH_H
