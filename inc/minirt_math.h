@@ -30,6 +30,7 @@
 
 # include <minirt_declarations.h> // function prototypes
 
+//	//	vec3 interface
 int			
 	vec3_is_normalised(
 		struct s_vec3 vector
@@ -43,14 +44,35 @@ struct s_vec3
 		struct s_vec3 vector
 		);	// FILE: math/vec3_normalise.c
 struct s_vec3
+	vec3_add(
+		struct s_vec3 a,
+		struct s_vec3 b
+		);	// FILE: math/vec3_add.c
+struct s_vec3
 	vec3_sub(
 		struct s_vec3 a,
 		struct s_vec3 b
 		);	// FILE: math/vec3_sub.c
 struct s_vec3
+	vec3_scalar_mul(
+		struct s_vec3 a,
+		double r
+		);	// FILE: math/vec3_scalar_mul.c
+double		
+	vec3_dot_product(
+		struct s_vec3 a,
+		struct s_vec3 b
+		);	// FILE: math/vec3_dot_product.c
+struct s_vec3
 	vec3_cross_product(
 		struct s_vec3 a,
 		struct s_vec3 b
 		);	// FILE: math/vec3_cross_product.c
+double		
+	vec3_box_product(
+		struct s_vec3 a,
+		struct s_vec3 b,
+		struct s_vec3 c
+		);	// FILE: math/vec3_box_product.c
 
 #endif // MINIRT_MATH_H
