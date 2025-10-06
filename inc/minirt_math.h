@@ -114,5 +114,4 @@ double
 		struct s_vec3 origin,
 		struct s_vec3 normal
 		);	// FILE: math/intersection/stlfile.c
-
 #endif // MINIRT_MATH_H
