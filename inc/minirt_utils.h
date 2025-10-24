@@ -84,19 +84,36 @@ int
 	get_real(
 		const char *str,
 		double *store
-		);	// FILE: utils/atof.c
+		);	// FILE: utils/get_int.c
 int	
 	get_real_limit(
 		const char *str,
 		double *store,
 		double lower_bound,
 		double upper_bound
-		);	// FILE: utils/atof_limit.c
+		);	// FILE: utils/get_int_limit.c
+int	
+	get_real_int(
+		const char *str,
+		double *store
+		);	// FILE: utils/get_real_int.c
+int	
+	get_real_int_limit(
+		const char *str,
+		double *store,
+		double lower_bound,
+		double upper_bound
+		);	// FILE: utils/get_real_int_limit.c
 int	
 	get_vec3(
 		const char *str,
 		t_vec3 *store
 		);	// FILE: utils/get_vec3.c
+int	
+	get_vec4(
+		const char *str,
+		t_vec4 *store
+		);	// FILE: utils/get_vec4.c
 int	
 	get_norm(
 		const char *str,
