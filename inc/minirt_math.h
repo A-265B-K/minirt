@@ -30,6 +30,17 @@
 
 # include <minirt_declarations.h> // function prototypes
 
+//	//	mathematical constants (for some fucking reason???????)
+
+//	//	trigonometric interface (for some fucking reason????)
+double	
+	sec(
+		double theta
+		);	// FILE: math/sec.c
+double	
+	asec(
+		double theta
+		);	// FILE: math/sec.c
 //	//	vec3 interface
 int		
 	vec3_is_normalised(
