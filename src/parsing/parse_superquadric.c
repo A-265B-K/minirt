@@ -41,7 +41,7 @@ const static struct s_sq_subtype
 	{"e", ELLIPSOID},
 	{"h1", HYPERBOLOID1},
 	{"h2", HYPERBOLOID2},
-	{"t", TORUS}
+	{"t", TOROID}
 };
 #define SQ_SUBTYPES 4
 
