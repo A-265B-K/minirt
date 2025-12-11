@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   minirt_utils.h                                     :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: mde-beer <mde-beer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2025/09/18 16:28:30 by mde-beer      #+#    #+#                 */
-/*   Updated: 2025/12/08 14:03:15 by alkuijte      ########   odam.nl         */
+/*                                                            ::::::::        */
+/*   minirt_utils.h                                          :+:    :+:       */
+/*                                                          +:+               */
+/*   By: mde-beer <mde-beer@student.codam.nl>              +#+                */
+/*                                                        +#+                 */
+/*   Created: 2025/09/18 16:28:30 by mde-beer            #+#    #+#           */
+/*   Updated: 2025/12/11 17:41:57 by mde-beer            ########   odam.nl   */
 /*                                                                            */
-/* ************************************************************************** */
-
+/*   —————No norm compliance?——————                                           */
+/*   ⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝                                           */
 /*   ⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇                                           */
 /*   ⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀                                           */
 /*   ⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀⠀                                           */
@@ -140,4 +140,9 @@ int
 		const char *str,
 		mlx_texture_t **bumpmap
 		);	// FILE: utils/get_bumpmap.c
+int
+	get_material_properties(
+		const char *str,
+		struct s_material *material
+		);	// FILE: utils/get_material_properties.c
 #endif // MINIRT_UTILS_H
